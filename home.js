@@ -5,13 +5,11 @@ function weWillGo(section){
     window.scrollTo({top: y, behavior: 'smooth'});
 }
 
-fetch('projects.json')
-    .then(function(response){return response.json()})
-    .then(function(data) {printData(data);})
-    .catch(function(err){console.log('error: ' + err);});
 
-function printData(projects){
+function printData(){
     for(let i = 0; i < projects.length; i++){
-        console.log(projects[i].projectName);
+        console.log(projects[i]);
     }
 }
+
+printData();
