@@ -6,10 +6,24 @@ function weWillGo(section){
 }
 
 
-function printData(){
-    for(let i = 0; i < projects.length; i++){
-        console.log(projects[i]);
-    }
+async function printData(){
+    document.getElementById("proj1_title").innerHTML = projects[0].projectName;
+    document.getElementById("proj1_desc").innerHTML = projects[0].description;
+    document.getElementById("proj2_title").innerHTML = projects[1].projectName;
+    document.getElementById("proj2_desc").innerHTML = projects[1].description;    
 }
 
-printData();
+
+/* <div class="cur_proj_container" id="proj1">
+                    <p class="proj_title" id="proj1_title"></p>
+                    <p class="proj_desc" id="proj1_desc"></p>
+                </div>
+                <div class="cur_proj_container">
+                    <p class="proj_title">Project Title 2</p>
+                    <p class="proj_desc">Project Desc 2</p>
+                </div>*/
+
+/*After Page Loaded*/
+document.addEventListener('DOMContentLoaded', function() {
+   printData();
+}, false);

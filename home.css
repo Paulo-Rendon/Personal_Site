@@ -240,3 +240,37 @@ nav a:focus {
     display: flex;
     flex-direction: column;
 }
+
+.current_projects{
+    height: 30%;
+    max-width: 100vw;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+
+.cur_proj_container{
+    width: 50%;
+    height: 100%;
+    margin-left: 5%;
+    margin-right: 5%;
+    background: rgba(110, 110, 110, 0);
+    display: flex;
+    flex-direction: column;
+}
+
+.cur_proj_container:hover{
+    background: rgba(110, 110, 110, 0.2);
+}
+
+.proj_title{
+    text-decoration: underline;
+    text-decoration-color: white;
+    color: white;
+    font-size: 20px;
+}
+
+.proj_desc{
+    color: white;
+    font-size: 14px;
+}

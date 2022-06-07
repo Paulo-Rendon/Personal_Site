@@ -1,6 +1,5 @@
 var projects = [
         {
-            "projectId": "1",
             "projectName": "Personal Website",
             "description": "I am creating a personal website, the one you are on currently",
             "languages": [
@@ -17,7 +16,6 @@ var projects = [
             "thumbnail": "images/personal_site_screenshot.png"
         },
         {
-            "projectId": "2",
             "projectName": "Android Game",
             "description": "I am making a simple infinate runner game to better my understanding of Unity",
             "languages": [
