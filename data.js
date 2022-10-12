@@ -1,5 +1,5 @@
 var projects = [
-    {
+        {
             "projectName": "Pi Lights",
             "description": "I want to scrape the internet to track when a specific sports team scores, then have the program send a message to my respberry pi to flash a predetermined light pattern.",
             "summary":"This project is going to involve some form of website scrapper, which will probably be written in Javascritp. I am also thinking of having a website that shows the current scores for said teams. I will write the Pi code in Python and have the color scheme hardcoded on the Pi console. This project will be done in steps, starting with the webscrapper since I feel like this step will take the most time and is the part I am least familiar with.",

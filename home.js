@@ -1,16 +1,6 @@
 var projIndex = 2;
 const queryString = window.location.search.substr(1);
 
-let parent = document.querySelector('.nav').parentElement;
-
-while (parent) {
-    const hasOverflow = getComputedStyle(parent).overflow;
-    if (hasOverflow !== 'visible') {
-        console.log(hasOverflow, parent);
-    }
-    parent = parent.parentElement;
-}
-
 function weWillGo(section){
     var sec = document.getElementById(section);
     var offset = window.innerHeight * .1;
