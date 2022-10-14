@@ -1,13 +1,15 @@
 *{
     box-sizing: border-box;
-    --main-color: #000;
-    --nav-color: #FFF;
+    
 }
 
 body {
+    --main-color: #000;
+    --nav-color: #FFF;
+    --highlight-color: #b50000;
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
-    background: linear-gradient(-45deg, #5c5c5c, #FFF);
+    background: linear-gradient(-45deg, #5c5c5c, var(--nav-color));
     background-size: 40000% 40000%;
     animation: gradient 15s ease infinite;
     width: 100%;
@@ -15,6 +17,13 @@ body {
     text-align: center;
     overflow: visible;
 }
+
+body.dark-mode{
+    --main-color: #FFF;
+    --nav-color: #000;
+    --highlight-color: #003994;
+}
+
 
 @keyframes gradient {
     0% {
@@ -65,7 +74,7 @@ h1{
 .title{
     font-family: 'Cabin Sketch', cursive;
     text-align: center;
-    color: var(--main-color);
+    color: var(--highlight-color);
     display: flex;
     flex-direction: column;
     float: left;
@@ -86,7 +95,7 @@ h1{
 }
 
 .logo h2{
-
+    color: var(--highlight-color);
 }
 
 /*---------- Landing Page ----------*/
@@ -95,7 +104,7 @@ h1{
     position: relative;
     overflow: auto;
     height: 100vh;
-    background: linear-gradient(-45deg, #ffffff, #b50000);
+    background: linear-gradient(-45deg, #ffffff, var(--highlight-color));
     animation: gradient 1s ease infinite;
     width: 100%;
     display: flex;
@@ -198,14 +207,14 @@ h1{
 }
 
 .button{
-    background: #de0e07;
+    background: var(--highlight-color);
     width: 10vw;
     height: 100%;
     margin-left: 2vw;
 }
 
 .button:hover{
-    background: #060b96;
+    background: var(--nav-color);
     cursor: pointer;
 }
 
@@ -249,7 +258,7 @@ nav{
     width: 100%;
     background: #000000; /* for old browsers (learned during senior project) */
     /*background: -webkit-linear-gradient(to right, #000000, #434343);*/
-    background: linear-gradient(to right, #0c9413, #19191f, #060b96);
+    background: linear-gradient(to right, var(--nav-color), #19191f, var(--highlight-color));
     height: 10vh;
 }
 
@@ -280,7 +289,7 @@ nav a{
     text-transform: uppercase;
     font-size: .8rem;
     padding: .5em;
-    color: var(--nav-color);
+    color: #FFF;
 }
 
 nav a:hover,
