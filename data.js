@@ -1,20 +1,17 @@
 var projects = [
         {
-            "projectName": "Personal Website",
-            "description": "I am creating a personal website, the one you are on currently",
-            "summary":"I am building this website to help further my understanding of web develeopment. This website will also function as my personal website where I will direct possible hires. It will second as my personal hub for all major projects I worked on either for school, or personal projects. I will also allow people on my site to download both my SSU transcript as well as my resume. I also want this site to show the current projects I am working on as motivation to constantly be working on at least 2 new projects at a time.",
+            "projectName": "Pi Lights",
+            "description": "I want to scrape the internet to track when a specific sports team scores, then have the program send a message to my respberry pi to flash a predetermined light pattern.",
+            "summary":"This project is going to involve some form of website scrapper, which will probably be written in Javascritp. I am also thinking of having a website that shows the current scores for said teams. I will write the Pi code in Python and have the color scheme hardcoded on the Pi console. This project will be done in steps, starting with the webscrapper since I feel like this step will take the most time and is the part I am least familiar with.",
             "languages": [
-                "HTML",
-                "CSS",
-                "Javascript"
+                "Javascript",
+                "Python"
             ],
             "links": {
-                "GitHub": "https://github.com/Paulo-Rendon/Personal_Site",
-                "Trello": "https://trello.com/b/gyOoexVY/personal-website",
-                "Figma": "https://www.figma.com/file/BVbkDqGunMEb2KpRO4PlTA/Untitled?node-id=0%3A1",
-                "Personal Site": "file:///C:/Users/Paulo/OneDrive/Desktop/Personal%20Projects/Website/index.html"
-    },
-            "thumbnail": "images/personal_site_screenshot.png"
+                "GitHub": "https://github.com/Paulo-Rendon/PiTeamLights",
+                "Trello": "https://trello.com/b/5lgZqZp4/raspberry-pi-lights"
+            },
+            "thumbnail": "images/piLights.png"
         },
         {
             "projectName": "Android Game",
@@ -28,6 +25,23 @@ var projects = [
                 "Trello": "https://trello.com/b/jywDNbmJ/game-dev"
     },
             "thumbnail": "images/android_project.png"
+        },
+        {
+            "projectName": "Personal Website",
+            "description": "I have created a personal website, the one you are on currently",
+            "summary":"I am building this website to help further my understanding of web develeopment. This website will also function as my personal website where I will direct possible hires. It will second as my personal hub for all major projects I worked on either for school, or personal projects. I will also allow people on my site to download both my SSU transcript as well as my resume. I also want this site to show the current projects I am working on as motivation to constantly be working on at least 2 new projects at a time.",
+            "languages": [
+                "HTML",
+                "CSS",
+                "Javascript"
+            ],
+            "links": {
+                "GitHub": "https://github.com/Paulo-Rendon/Personal_Site",
+                "Trello": "https://trello.com/b/gyOoexVY/personal-website",
+                "Figma": "https://www.figma.com/file/BVbkDqGunMEb2KpRO4PlTA/Untitled?node-id=0%3A1",
+                "Personal Site": "file:///C:/Users/Paulo/OneDrive/Desktop/Personal%20Projects/Website/index.html"
+    },
+            "thumbnail": "images/personal_site_screenshot.png"
         },
         {
             "projectName": "Research on PDF payload injection",

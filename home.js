@@ -1,5 +1,18 @@
 var projIndex = 2;
 const queryString = window.location.search.substr(1);
+const prefersDarkTheme = window.matchMedia("(prefers-color-scheme: dark)");
+
+function changeMode(){
+    if(prefersDarkTheme.matches){
+        document.body.classList.toggle("light-mode");
+        var theme = document.body.classList.contains("light-mode")!=-1 ? "light" : "dark";
+    }
+    else{
+        document.body.classList.toggle("dark-mode");
+        var theme = document.body.classList.contains("dark-mode")!=1 ? "dark" : "light";
+    }
+    document.cookie = "theme=" + theme;
+}
 
 function weWillGo(section){
     var sec = document.getElementById(section);
@@ -69,8 +82,9 @@ function buildProjects(){
 }
 
 function openProject(index){
+    console.log("running open project");
     indexOfOpenedProject = index;
-    window.location.href = 'proj.html?projIndex=' + index;
+    window.location.href = 'proj.php?projIndex=' + index;
 }
 
 /*

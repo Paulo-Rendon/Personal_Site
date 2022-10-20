@@ -1,16 +1,29 @@
 *{
     box-sizing: border-box;
+    
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    --main-color: #000;
+    --nav-color: #FFF;
+    --highlight-color: #b50000;
+    font-family: Cambria, Georgia, serif;
     margin: 0;
-    background: linear-gradient(-45deg, #000000, #434343);
+    background: linear-gradient(-45deg, #5c5c5c, var(--nav-color));
     background-size: 40000% 40000%;
     animation: gradient 15s ease infinite;
     width: 100%;
+    height: 100%;
     text-align: center;
+    overflow: visible;
 }
+
+body.dark-mode{
+    --main-color: #FFF;
+    --nav-color: #000;
+    --highlight-color: #003994;
+}
+
 
 @keyframes gradient {
     0% {
@@ -34,15 +47,15 @@ body {
 }
 
 .section-name{
-    color: #fff;
-    font-family: 'Patrick Hand SC', cursive;
+    color: var(--main-color);
+    font-family: Cambria, Georgia, serif;
     width: 100%;
     text-transform: none;
 }
 
 .proj_section-name{
-    color: #fff;
-    font-family: 'Patrick Hand SC', cursive;
+    color: var(--main-color);
+    font-family: Cambria, Georgia, serif;
     width: 100%;
     text-transform: none;
     font-size: 4vh;
@@ -50,7 +63,7 @@ body {
 
 h1{
 	text-transform: uppercase;
-	font-size: 50px;
+	font-size: 4vw;
 	line-height: 0.5;
 	margin: 10px 0;
     padding-top: 10px;
@@ -59,9 +72,9 @@ h1{
 /*---------- Temp Logo ----------*/
 
 .title{
-    font-family: 'Cabin Sketch', cursive;
+    font-family: Cambria, Georgia, serif;
     text-align: center;
-    color: #FFF;
+    color: var(--highlight-color);
     display: flex;
     flex-direction: column;
     float: left;
@@ -82,10 +95,46 @@ h1{
 }
 
 .logo h2{
-
+    color: var(--highlight-color);
 }
 
+/*---------- Landing Page ----------*/
 
+.landing_page_section{
+    position: relative;
+    overflow: auto;
+    height: 100vh;
+    background: linear-gradient(-45deg, #ffffff, var(--highlight-color));
+    animation: gradient 1s ease infinite;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.landing_page_section *{
+    position: relative;
+    margin: auto;
+    border: auto;
+    text-align: center;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    font-size: 3vw;
+}
+
+.landing_page_section a{
+    cursor: pointer;
+}
+
+.landing_page_links{
+    display: flex;
+    flex-direction: row;
+}
+
+.landing_page_links *{
+    margin: 2vw;
+}
 /*---------- About Me ----------*/
 
 .about_me_section{
@@ -99,7 +148,7 @@ h1{
     flex-direction: column;
     justify-content: left;
     padding 1em;
-    color: #FFF;
+    color: var(--main-color);
     top: 0px;
     bottom: 0px;
     float: left;
@@ -112,13 +161,13 @@ h1{
     justify-content: left;
     position: absolute;
     bottom: 0px;
-    color: #FFF;
+    color: var(--main-color);
     left: 0px;
     text-align: left;
 }
 
 .about_me_section ul a:visited{
-    color: aqua;
+    color: var(--highlight-color);
 }
 
 .image{
@@ -131,7 +180,7 @@ h1{
     margin-left: 5vw;
     margin-right: 5vw;
     margin-top: 10vh;
-    font-size: 20px;
+    font-size: 3.5vh;
 }
 /*----------Resume----------*/
 .resume_section{
@@ -158,14 +207,14 @@ h1{
 }
 
 .button{
-    background: #de0e07;
+    background: var(--highlight-color);
     width: 10vw;
     height: 100%;
     margin-left: 2vw;
 }
 
 .button:hover{
-    background: #060b96;
+    background: var(--nav-color);
     cursor: pointer;
 }
 
@@ -181,7 +230,7 @@ h1{
     transform: scale(1) translate(-10px, -70px);
 }
 .button p{
-    color: white;
+    color: var(--main-color);
     justify-content: center;
     text-align: center;
     font-size: 0.9em;
@@ -191,6 +240,10 @@ h1{
 /*---------- Nav Bar ----------*/
 
 .navbar{
+    z-index: 2;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
 }
 
 .header {
@@ -200,21 +253,19 @@ h1{
 }
 
 nav{
-    z-index: 2;
-    position: fixed;
-    top: 0;
-    margin: 0;
+    position: absolute;
+    border: 1px;
     width: 100%;
     background: #000000; /* for old browsers (learned during senior project) */
     /*background: -webkit-linear-gradient(to right, #000000, #434343);*/
-    background: linear-gradient(to right, #de0e07, #19191f, #060b96);
+    background: linear-gradient(to right, var(--nav-color), #19191f, var(--highlight-color));
     height: 10vh;
 }
 
 
 .nav-text{
-    color: #fff;
-    font-family: 'Patrick Hand SC', cursive;
+    color: var(--nav-color);
+    font-family: Cambria, Georgia, serif;
     font-size: 1.2em;
 }
 
@@ -327,14 +378,14 @@ nav a:focus {
 
 .proj_title{
     text-decoration: underline;
-    text-decoration-color: white;
-    color: white;
+    text-decoration-color: var(--main-color);
+    color: var(--main-color);
     font-size: 20px;
 }
 
 .proj_desc{
-    color: white;
-    font-size: 14px;
+    color:var(--main-color);
+    font-size: 2vh;
 }
 
 
@@ -348,14 +399,14 @@ nav a:focus {
 }
 
 .proj_page_image img{
-    height=100%;
+    /*height: 100%;*/
     max-width: 40%;
     margin-right: auto;
     margin-left: 5%;
 }
 
 .proj_page_image p{
-    height=100%;
+    /*height: 100%;*/
     max-width: 40%;
     margin-right: auto;
     margin-left: auto;
@@ -386,17 +437,17 @@ nav a:focus {
 }
 
 .proj_links_list li{
-    color: white;
+    color: var(--main-color);
 }
 
 .proj_link_name{
-    color: blue;
+    color: var(--highlight-color);
     font-size: 15px;
     margin-top: auto;
 }
 
 .proj_link_site{
-    color: white;
+    color:var(--main-color);
     font-size: 13px;
     text-decoration: none;
     margin-left: 5px;

@@ -1,3 +1,13 @@
+<?php
+$themeClass = '';
+if (!empty($_COOKIE['theme'])) {
+  if ($_COOKIE['theme'] == 'dark') {
+    $themeClass = 'dark-theme';
+  } else if ($_COOKIE['theme'] == 'light') {
+    $themeClass = 'light-theme';
+  }  
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -8,12 +18,24 @@
         <script src="data.js"></script>
         <script src="home.js"></script>
     </head>
-    <body>
+
+    <body class="<?php echo $themeClass; ?>">
+        <div class="landing_page_section">
+            <h1>Hello, my name is Paulo Rendon Jr!</h1>
+            <p>-- Software developer --</p>
+            <a onClick="weWillGo('start_section')"><img src="images/temp_button2.png" alt="home" height="80vh" width="auto">
+            <div class="landing_page_links">
+                <a href = "mailto: PauloRendon13@gmail.com"><img src="images/gmail_logo2.png" alt="email" height="80vh" width="auto"></a>
+                <a href="https://www.linkedin.com/in/paulo-rendon-jr-a54a20203/" target="_blank"><img src="images/linkedin_logo.png" alt="linkedIn" height="80vh" width="auto" ></a>
+                <a href="https://www.github.com/Paulo-Rendon" target="_blank"><img src="images/github_logo2.png" alt="GitHub" height="80vh" width="auto"></a>
+                <a href="https://trello.com/paulocesarrendonjr/boards" target="_blank"><img src="images/trello_logo.png" alt="Trello" height="80vh" width="auto"></a>
+            </div>
+        </div>
         <div class = "navbar">
             <section class="header">
                 <nav>
                     <div class="title">
-                        <a class="logo" href="index.html">
+                        <a class="logo" href="index.php">
                             <svg width="15vh" height="10vh"
     xmlns = "http://www.w3.org/2000/svg"
     xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -93,20 +115,20 @@
                         <li><a onClick="weWillGo('start_section')" class="nav-link">Home</a></li>
                         <li><a onClick="weWillGo('resume_section')" class="nav-link">Resume</a></li>
                         <li><a onClick="weWillGo('projects_section')" class="nav-link">Projects</a></li>
-                        <li><a href="https://www.linkedin.com/in/paulo-rendon-jr-a54a20203/" target="_blank" class="nav-link">LinkedIn</a></li>
+                        <li><a onClick="changeMode()" class="nav-link" id="modeBtn">Change Mode</a></li>
                     </ul>
                 </nav>
             </section>
         </div>
         <div class="title-container">
-            <h1 class="section-name" id="start_section">Hi, my name is Paulo Rendon</h1>
+            <h1 class="section-name" id="start_section">About Me!</h1>
         </div>
         <div class="about_me_section">
             <div class="image">
-                <img src="images/new_pic_of_me.jpg" alt="image of me" height="auto" width="100%">
+                <img src="images/new_pic_of_me_circle.png" alt="image of me" height="auto" width="90%">
             </div>
             <div class = "about_me">
-                <p class="desc_myself">I graduated from Sonoma State University with a 3.572 GPA, earning me the Cum Laude honors. I studied Computer Science, and made the dean's list for six of my eight total semesters at Sonoma State University with 3 semesters being online due to COVID. I am a hard worker currently looking for a job that can help further my knowledge in Software development. I try to stay active when I can, and I am a big fan of really any physical activities, especially Brazilian Jiu Jitsu and American Football. I also enjoy playing video games and have recently started working out.</p>
+                <p class="desc_myself">I graduated from Sonoma State University with a 3.572 GPA in May 2021, earning me the Cum Laude honors. I studied Computer Science, and made the dean's list for six of my eight total semesters at Sonoma State University with 3 semesters being online due to COVID. I am a hard worker currently looking for a job that can help further my knowledge of Software development. I am best at C++ and Python, but also know HTML, CSS, SVG, SQL, and C.</p>
             </div>
             <ul>
                 <a href="https://www.linkedin.com/in/paulo-rendon-jr-a54a20203/" target="_blank">LinkedIn: https://www.linkedin.com/in/paulo-rendon-jr-a54a20203/</a>
@@ -146,7 +168,7 @@
 
             </div>
             <div class="title-container">
-                <h1 class="section-name">Previous Projects</h1>
+                <h1 class="section-name">Favorite Projects</h1>
             </div>
             <div class="prev_proj_cont">
                 <p class="arrow" id="left_arrow" onclick='shiftProj("left")' style="color: rgba(255, 255, 255, 1)">&#8249;</p>
