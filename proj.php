@@ -1,3 +1,14 @@
+<?php
+$themeClass = '';
+if (!empty($_COOKIE['theme'])) {
+  if ($_COOKIE['theme'] == 'dark') {
+    $themeClass = 'dark-theme';
+  } else if ($_COOKIE['theme'] == 'light') {
+    $themeClass = 'light-theme';
+  }  
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -8,12 +19,12 @@
         <script src="data.js"></script>
         <script src="proj_page.js"></script>
     </head>
-    <body>
+    <body class="<?php echo $themeClass; ?>">
         <div class = "navbar">
             <section class="header">
                 <nav>
                     <div class="title">
-                        <a class="logo" href="index.html">
+                        <a class="logo" href="index.php">
                             <svg width="15vh" height="10vh"
     xmlns = "http://www.w3.org/2000/svg"
     xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -90,10 +101,10 @@
                         </a>
                     </div>
                     <ul>
-                        <li><a href="index.html?start_section" class="nav-link">Home</a></li>
-                        <li><a href="index.html?resume_section" class="nav-link">Resume</a></li>
-                        <li><a href="index.html?projects_section" class="nav-link">Projects</a></li>
-                        <li><a href="https://www.linkedin.com/in/paulo-rendon-jr-a54a20203/" target="_blank" class="nav-link">LinkedIn</a></li>
+                        <li><a href="index.php?start_section" class="nav-link">Home</a></li>
+                        <li><a href="index.php?resume_section" class="nav-link">Resume</a></li>
+                        <li><a href="index.php?projects_section" class="nav-link">Projects</a></li>
+                        <li><a onClick="changeMode()" class="nav-link" id="modeBtn">Change Mode</a></li>
                     </ul>
                 </nav>
             </section>

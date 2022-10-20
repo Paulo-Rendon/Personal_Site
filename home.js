@@ -82,8 +82,9 @@ function buildProjects(){
 }
 
 function openProject(index){
+    console.log("running open project");
     indexOfOpenedProject = index;
-    window.location.href = 'proj.html?projIndex=' + index;
+    window.location.href = 'proj.php?projIndex=' + index;
 }
 
 /*

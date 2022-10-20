@@ -7,7 +7,7 @@ body {
     --main-color: #000;
     --nav-color: #FFF;
     --highlight-color: #b50000;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Cambria, Georgia, serif;
     margin: 0;
     background: linear-gradient(-45deg, #5c5c5c, var(--nav-color));
     background-size: 40000% 40000%;
@@ -48,14 +48,14 @@ body.dark-mode{
 
 .section-name{
     color: var(--main-color);
-    font-family: 'Patrick Hand SC', cursive;
+    font-family: Cambria, Georgia, serif;
     width: 100%;
     text-transform: none;
 }
 
 .proj_section-name{
     color: var(--main-color);
-    font-family: 'Patrick Hand SC', cursive;
+    font-family: Cambria, Georgia, serif;
     width: 100%;
     text-transform: none;
     font-size: 4vh;
@@ -72,7 +72,7 @@ h1{
 /*---------- Temp Logo ----------*/
 
 .title{
-    font-family: 'Cabin Sketch', cursive;
+    font-family: Cambria, Georgia, serif;
     text-align: center;
     color: var(--highlight-color);
     display: flex;
@@ -167,7 +167,7 @@ h1{
 }
 
 .about_me_section ul a:visited{
-    color: aqua;
+    color: var(--highlight-color);
 }
 
 .image{
@@ -265,7 +265,7 @@ nav{
 
 .nav-text{
     color: var(--nav-color);
-    font-family: 'Patrick Hand SC', cursive;
+    font-family: Cambria, Georgia, serif;
     font-size: 1.2em;
 }
 
@@ -441,7 +441,7 @@ nav a:focus {
 }
 
 .proj_link_name{
-    color: blue;
+    color: var(--highlight-color);
     font-size: 15px;
     margin-top: auto;
 }
