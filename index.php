@@ -2,9 +2,9 @@
 $themeClass = '';
 if (!empty($_COOKIE['theme'])) {
   if ($_COOKIE['theme'] == 'dark') {
-    $themeClass = 'dark-theme';
+    $themeClass = 'dark-mode';
   } else if ($_COOKIE['theme'] == 'light') {
-    $themeClass = 'light-theme';
+    $themeClass = 'light-mode';
   }  
 }
 ?>
@@ -126,6 +126,7 @@ if (!empty($_COOKIE['theme'])) {
         <div class="about_me_section">
             <div class="image">
                 <img src="images/new_pic_of_me_circle.png" alt="image of me" height="auto" width="90%">
+                <ul><a href="https://www.instagram.com/irjimmyg" target="_blank">Photo Credit: Instagram - irjimmyg</a></ul>
             </div>
             <div class = "about_me">
                 <p class="desc_myself">I graduated from Sonoma State University with a 3.572 GPA in May 2021, earning me the Cum Laude honors. I studied Computer Science, and made the dean's list for six of my eight total semesters at Sonoma State University with 3 semesters being online due to COVID. I am a hard worker currently looking for a job that can help further my knowledge of Software development. I am best at C++ and Python, but also know HTML, CSS, SVG, SQL, and C.</p>

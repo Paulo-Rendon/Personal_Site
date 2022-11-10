@@ -176,6 +176,11 @@ h1{
     padding: 1em;
 }
 
+.image ul{
+    left: auto;
+    padding: 1em;
+}
+
 .desc_myself{
     margin-left: 5vw;
     margin-right: 5vw;
