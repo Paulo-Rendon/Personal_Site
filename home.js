@@ -118,3 +118,17 @@ function shiftProj(direction){
     document.getElementById("prev_projects").innerHTML = "";
     buildProjects(); 
 }
+
+function homeDrop(){
+    var btn = document.getElementById("dropdownBtn");
+    var menu = document.getElementById("dropMenu");
+    if(btn.innerHTML == "▼"){
+        btn.innerHTML = "▲";
+        menu.style.display = "block";
+    }
+    //When btn is 
+    else{
+        btn.innerHTML = "▼";
+        menu.style.display = "none";
+    }
+}

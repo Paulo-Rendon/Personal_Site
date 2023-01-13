@@ -31,12 +31,13 @@ if (!empty($_COOKIE['theme'])) {
                 <a href="https://trello.com/paulocesarrendonjr/boards" target="_blank"><img src="images/trello_logo.png" alt="Trello" height="80vh" width="auto"></a>
             </div>
         </div>
-        <div class = "navbar">
-            <section class="header">
+        <div class = "stick_handler">
+        <!-- <div class = "navbar"> -->
+          <!--  <section class="header"> -->
                 <nav>
                     <div class="title">
                         <a class="logo" href="index.php">
-                            <svg width="15vh" height="10vh"
+                            <svg width="7vw" height="auto"
     xmlns = "http://www.w3.org/2000/svg"
     xmlns:xlink="http://www.w3.org/1999/xlink">
     <title>RendonE3d</title>
@@ -116,9 +117,17 @@ if (!empty($_COOKIE['theme'])) {
                         <li><a onClick="weWillGo('resume_section')" class="nav-link">Resume</a></li>
                         <li><a onClick="weWillGo('projects_section')" class="nav-link">Projects</a></li>
                         <li><a onClick="changeMode()" class="nav-link" id="modeBtn">Change Mode</a></li>
+                        <a onClick="homeDrop()" class="dropdown" id="dropdownBtn">▼</a>
                     </ul>
                 </nav>
-            </section>
+           <!-- </section> -->
+      <!--  </div> -->
+            <div class="dropMenu" id="dropMenu">
+                <li><a onClick="weWillGo('start_section')" class="drop-link">Home</a></li>
+                <li><a onClick="weWillGo('resume_section')" class="drop-link">Resume</a></li>
+                <li><a onClick="weWillGo('projects_section')" class="drop-link">Projects</a></li>
+                <li><a onClick="changeMode()" class="drop-link" id="modeBtn">Change Mode</a></li>
+            </div>
         </div>
         <div class="title-container">
             <h1 class="section-name" id="start_section">About Me!</h1>
