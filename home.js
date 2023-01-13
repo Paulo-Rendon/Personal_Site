@@ -5,13 +5,13 @@ const prefersDarkTheme = window.matchMedia("(prefers-color-scheme: dark)");
 function changeMode(){
     if(prefersDarkTheme.matches){
         document.body.classList.toggle("light-mode");
-        var theme = document.body.classList.contains("light-mode")!=-1 ? "light" : "dark";
+        var theme = document.body.classList.contains("light-mode")!=-1 ? "dark" : "light";
     }
     else{
         document.body.classList.toggle("dark-mode");
-        var theme = document.body.classList.contains("dark-mode")!=1 ? "dark" : "light";
+        var theme = document.body.classList.contains("dark-mode")!=1 ? "light" : "dark";
     }
-    document.cookie = "theme=" + theme;
+    document.cookie = "theme=" + theme + ";expires=" + new Date(new Date().getTime()+60*60*1000*24).toGMTString()+";";
 }
 
 function weWillGo(section){
