@@ -20,12 +20,13 @@ if (!empty($_COOKIE['theme'])) {
         <script src="proj_page.js"></script>
     </head>
     <body class="<?php echo $themeClass; ?>">
-        <div class = "navbar">
-            <section class="header">
+       <!-- <div class = "navbar">
+            <section class="header"> -->
+        <div class="sticky_handler">
                 <nav>
                     <div class="title">
                         <a class="logo" href="index.php">
-                            <svg width="15vh" height="10vh"
+                            <svg width="7vw" height="10vh"
     xmlns = "http://www.w3.org/2000/svg"
     xmlns:xlink="http://www.w3.org/1999/xlink">
     <title>RendonE3d</title>
@@ -105,10 +106,18 @@ if (!empty($_COOKIE['theme'])) {
                         <li><a href="index.php?resume_section" class="nav-link">Resume</a></li>
                         <li><a href="index.php?projects_section" class="nav-link">Projects</a></li>
                         <li><a onClick="changeMode()" class="nav-link" id="modeBtn">Change Mode</a></li>
+                        <a onClick="homeDrop()" class="dropdown" id="dropdownBtn">▼</a>
                     </ul>
                 </nav>
-            </section>
+            <div class="dropMenu" id="dropMenu">
+                <li><a href="index.php?start_section" class="drop-link">Home</a></li>
+                <li><a href="index.php?resume_section" class="drop-link">Resume</a></li>
+                <li><a href="index.php?projects_section" class="drop-link">Projects</a></li>
+                <li><a onClick="changeMode()" class="drop-link" id="modeBtn">Change Mode</a></li>
+            </div>
         </div>
+            <!--</section>
+        </div>-->
         
         <div class="proj_page_image" id="proj_page_image">
         </div>

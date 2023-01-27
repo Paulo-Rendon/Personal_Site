@@ -35,9 +35,9 @@ if (!empty($_COOKIE['theme'])) {
         <!-- <div class = "navbar"> -->
           <!--  <section class="header"> -->
                 <nav>
-                    <div class="title">
+              <!--      <div class="title"> -->
                         <a class="logo" href="index.php">
-                            <svg width="7vw" height="auto"
+                            <svg width="7vw" height="10vh"
     xmlns = "http://www.w3.org/2000/svg"
     xmlns:xlink="http://www.w3.org/1999/xlink">
     <title>RendonE3d</title>
@@ -111,7 +111,7 @@ if (!empty($_COOKIE['theme'])) {
 </svg>
                             <h2>Paulo Rendon</h2>
                         </a>
-                    </div>
+       <!--             </div> -->
                     <ul>
                         <li><a onClick="weWillGo('start_section')" class="nav-link">Home</a></li>
                         <li><a onClick="weWillGo('resume_section')" class="nav-link">Resume</a></li>
@@ -151,7 +151,8 @@ if (!empty($_COOKIE['theme'])) {
         </div>
         <div class="resume_section">
             <div class = "resume">
-                <embed src="images/RendonResume_trans.pdf" width="80%" height="100%">
+               <!-- <embed src="images/RendonResume_trans.pdf" width="80%" height="100%"> -->
+                <object data="images/RendonResume_trans.pdf" type="application/pdf" width="80%" height="100%"></object>
             </div>
             <div class="btn_menu">
                 <div class = "button" id="res_btn" onclick='download("images/RendonResume2022.pdf", "RendonResume2022")'>
@@ -181,11 +182,11 @@ if (!empty($_COOKIE['theme'])) {
                 <h1 class="section-name">Favorite Projects</h1>
             </div>
             <div class="prev_proj_cont">
-                <p class="arrow" id="left_arrow" onclick='shiftProj("left")' style="color: rgba(255, 255, 255, 1)">&#8249;</p>
+                <p class="arrow" id="left_arrow" onclick='shiftProj("left")'>&#8249;</p>
                 <div class="prev_projects" id="prev_projects">
 
                 </div>
-                <p class="arrow" id="right_arrow" onclick='shiftProj("right")'style="color: rgba(255, 255, 255, 1)">&#8250;</p>
+                <p class="arrow" id="right_arrow" onclick='shiftProj("right")'>&#8250;</p>
             </div>
         </div>
     </body>

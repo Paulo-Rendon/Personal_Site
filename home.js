@@ -71,14 +71,14 @@ function buildProjects(){
     }
     
     if(projIndex > 2)
-        document.getElementById("left_arrow").style = "color: rgba(255, 255, 255, 1)";
+        document.getElementById("left_arrow").style.visibility = "visible";
     else
-        document.getElementById("left_arrow").style = "color: rgba(255, 255, 255, 0)";
+        document.getElementById("left_arrow").style.visibility = "hidden";
     
     if(projIndex + 4 < projects.length)
-        document.getElementById("right_arrow").style = "color: rgba(255, 255, 255, 1)";
+        document.getElementById("right_arrow").style.visibility = "visible";
     else
-        document.getElementById("right_arrow").style = "color: rgba(255, 255, 255, 0)";
+        document.getElementById("right_arrow").style.visibility = "hidden";
 }
 
 function openProject(index){

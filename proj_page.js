@@ -44,3 +44,17 @@ function changeMode(){
     }
     document.cookie = "theme=" + theme + ";expires=" + new Date(new Date().getTime()+60*60*1000*24).toGMTString()+";";
 }
+
+function homeDrop(){
+    var btn = document.getElementById("dropdownBtn");
+    var menu = document.getElementById("dropMenu");
+    if(btn.innerHTML == "▼"){
+        btn.innerHTML = "▲";
+        menu.style.display = "block";
+    }
+    //When btn is 
+    else{
+        btn.innerHTML = "▼";
+        menu.style.display = "none";
+    }
+}

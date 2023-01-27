@@ -82,6 +82,11 @@ h1{
 /*---------- Temp Logo ----------*/
 
 .title{
+
+}
+
+
+.logo {
     font-family: Cambria, Georgia, serif;
     text-align: center;
     color: var(--highlight-color);
@@ -92,10 +97,6 @@ h1{
     margin-left: 1em;
     height: auto;
     letter-spacing: 1px;
-}
-
-
-.logo {
     position: absolute;
     display: flex;
     flex-direction: row;
@@ -273,11 +274,15 @@ h1{
     width: 100%;
     height: 5vh;
 }
+    
 
 nav{
+    float: right;
+    
     /*position: absolute;*/
     border: 1px;
     width: 100%;
+    height: auto;
     background: #000000; /* for old browsers (learned during senior project) */
     /*background: -webkit-linear-gradient(to right, #000000, #434343);*/
     background: linear-gradient(to right, var(--nav-color), #19191f, var(--highlight-color));
@@ -401,8 +406,9 @@ nav a:focus {
 
 .arrow{
     margin: auto;
-    font-size: 24px;
+    font-size: 50px;
     cursor: pointer;
+    color:var(--main-color);
 }
 
 .prev_proj_container{
@@ -451,6 +457,7 @@ nav a:focus {
     position: relative;
     display: flex;
     flex-direction: row;
+    width: 100%;
 }
 
 .proj_page_image img{
@@ -470,16 +477,17 @@ nav a:focus {
 .proj_bottom{
     display: flex;
     flex-direction: row;
+    height: auto;
 }
 
 .proj_languages{
-    height: 40vh;
+    height: auto;
     width: 50vw;
     margin-top: 10vh;
 }
 
 .proj_links_list{
-    height: 40vh;
+    height: auto;
     width: 50vw;
     margin-top: 10vh;
 }
