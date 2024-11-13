@@ -1,6 +1,7 @@
 var projIndex = 2;
 const queryString = window.location.search.substr(1);
 const prefersDarkTheme = window.matchMedia("(prefers-color-scheme: dark)");
+const MAX_PROJ_DISPLAY = 3;
 
 function changeMode(){
     if(prefersDarkTheme.matches){
@@ -53,6 +54,7 @@ async function printData(){
 document.addEventListener('DOMContentLoaded', function() {
     printData();
     buildProjects();
+    buildProjectsTip();
     if(queryString){
         console.log(queryString);
         weWillGo(queryString);
@@ -62,23 +64,42 @@ document.addEventListener('DOMContentLoaded', function() {
 }, false);
 
 function buildProjects(){
-    for(var tmp = 0; tmp < 4 && projIndex + tmp < projects.length; tmp++){
+    for(var tmp = 0; tmp < MAX_PROJ_DISPLAY && projIndex + tmp < projects.length; tmp++){
             document.getElementById("prev_projects").innerHTML += `
-            <div class=\"prev_proj_container\" onClick = \"openProject(${projIndex + tmp})\">
+            <div class=\"prev_proj_container\" value= ${projIndex + tmp} onClick = \"openProject(${projIndex + tmp})\">
+                <img class=\"proj_thumb\" src=${projects[projIndex + tmp].thumbnail}>
                 <p class=\"proj_title\">${projects[projIndex + tmp].projectName}</p>
-                <p class=\"proj_desc\">${projects[projIndex + tmp].description}</p>
             </div>`;
     }
     
     if(projIndex > 2)
-        document.getElementById("left_arrow").style = "color: rgba(255, 255, 255, 1)";
+        document.getElementById("left_arrow").style.visibility = "visible";
     else
-        document.getElementById("left_arrow").style = "color: rgba(255, 255, 255, 0)";
+        document.getElementById("left_arrow").style.visibility = "hidden";
     
-    if(projIndex + 4 < projects.length)
-        document.getElementById("right_arrow").style = "color: rgba(255, 255, 255, 1)";
+    if(projIndex + MAX_PROJ_DISPLAY < projects.length)
+        document.getElementById("right_arrow").style.visibility = "visible";
     else
-        document.getElementById("right_arrow").style = "color: rgba(255, 255, 255, 0)";
+        document.getElementById("right_arrow").style.visibility = "hidden";
+}
+
+function buildProjectsTip(){
+    
+    
+    /* why isn't this line working, sees it as undefined */
+    console.log(projects[0].projectName);
+    
+    
+    var projects = document.getElementById("prev_projects");
+    var tip_container = document.getElementById("project_popup_container");
+    for(const child of projects.children){
+        console.log(child.id);
+        var bounds = child.getBoundingClientRect();
+        console.log("This child is bounded at " + bounds.top + ", "+ bounds.left + ", " + bounds.right + ", and " + bounds.bottom + "and a value of " + child.getAttribute('value'));
+        tip_container.innerHTML += `<div class=\"prev_proj_popup>
+                                    </div>`;
+        console.log(projects[0].projectName);
+    }
 }
 
 function openProject(index){
@@ -96,18 +117,18 @@ function openProject(index){
 
 function shiftProj(direction){
     if(direction == "right"){
-        if(projIndex + 4 > projects.length)
+        if(projIndex + MAX_PROJ_DISPLAY > projects.length)
             console.log("Cannot shift left");
         else{
-            projIndex += 4;
+            projIndex += MAX_PROJ_DISPLAY;
 
         }
     }
     else if(direction == "left"){
-        if(projIndex - 4 < 2)
+        if(projIndex - MAX_PROJ_DISPLAY < 2)
             console.log("Cannot shift right");
         else{
-            projIndex -= 4;
+            projIndex -= MAX_PROJ_DISPLAY;
 
         }
     }
@@ -117,4 +138,18 @@ function shiftProj(direction){
     }
     document.getElementById("prev_projects").innerHTML = "";
     buildProjects(); 
+}
+
+function homeDrop(){
+    var btn = document.getElementById("dropdownBtn");
+    var menu = document.getElementById("dropMenu");
+    if(btn.innerHTML == "▼"){
+        btn.innerHTML = "▲";
+        menu.style.display = "block";
+    }
+    //When btn is 
+    else{
+        btn.innerHTML = "▼";
+        menu.style.display = "none";
+    }
 }

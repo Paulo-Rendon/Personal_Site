@@ -1,0 +1,46 @@
+<!DOCTYPE html> 
+<html> 
+      
+<head> 
+    <title> 
+        Star Shape Button
+    </title> 
+</head>
+  
+<body>
+    <a href="#">
+        <svg id="btn_win" width="400" height="300">
+            <mask id="startBtn">
+                <rect x = "0" y="0" width="800" height="500" 
+                  style="fill:black;"/>
+                <g id="btn">
+                    <rect id="btn" x="27.58" y="123.87" width="244.84" height="52.27"   rx="14"
+                    style="fill: none; stroke: white; stroke-width: 5;"
+                />
+                    <text x="125.24" y="155.82" font-family="Noto Sans" font-size="15" fill="white" stroke="white">Begin!</text>
+                </g>
+            </mask>
+            <rect x = "0" y="0" width="300" height="300" mask="url(#startBtn)"
+                  style="fill:#003994;"/>
+            <line x1="366" y1="71" x2="234" y2="267" mask="url(#startBtn)" style="opacity: 75%; stroke: white; fill: white; stroke-width: 20">
+                <animate
+                         attributeName="x1"
+                         from="366"
+                         to="57"
+                         dur="3s"
+                         begin="mouseover"
+                         />
+                <animate
+                         attributeName = "x2"
+                         from="234"
+                         to="-74.8"
+                         dur="3s"
+                         begin="mouseover"
+                         />
+            </line>
+            
+        </svg>
+    </a>
+</body>
+  
+</html>

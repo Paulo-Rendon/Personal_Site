@@ -9,7 +9,7 @@ body {
     --highlight-color: #b50000;
     font-family: Cambria, Georgia, serif;
     margin: 0;
-    background: linear-gradient(-45deg, #5c5c5c, var(--nav-color));
+    background-color: var(--nav-color);
     background-size: 40000% 40000%;
     animation: gradient 15s ease infinite;
     width: 100%;
@@ -61,6 +61,15 @@ body.dark-mode{
     font-size: 4vh;
 }
 
+.proj_sec_name{
+    color: var(--main-color);
+    font-family: Cambria, Georgia, serif;
+    text-transform: none;
+    text-align: left;
+    margin-left: 1em;
+    font-size: 4vh;
+}
+
 h1{
 	text-transform: uppercase;
 	font-size: 4vw;
@@ -69,9 +78,23 @@ h1{
     padding-top: 10px;
 }
 
+.stick_handler{
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;    
+}
+
 /*---------- Temp Logo ----------*/
 
 .title{
+
+}
+
+
+.logo {
     font-family: Cambria, Georgia, serif;
     text-align: center;
     color: var(--highlight-color);
@@ -82,10 +105,6 @@ h1{
     margin-left: 1em;
     height: auto;
     letter-spacing: 1px;
-}
-
-
-.logo {
     position: absolute;
     display: flex;
     flex-direction: row;
@@ -96,14 +115,47 @@ h1{
 
 .logo h2{
     color: var(--highlight-color);
+    padding-left: 5px;
 }
 
 /*---------- Landing Page ----------*/
 
-.landing_page_section{
+.filler{
+    min-height: 100vh;
     position: relative;
-    overflow: auto;
+}
+
+.opener_button{
+    color: black;
+    font-size: 5vw;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    border: 6px solid black;
+    border-radius: 30px;
+    background-color: rgba(0,0,0,0.2);
+}
+
+.scroll_container{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    margin-top: 10vh;
+    background: var(--nav-color);
+}
+
+#scroll_start{
+    position: absolute;
+    top: 100vh;
+}
+
+.landing_page_section{
+    position: fixed;
+    /*overflow: auto;*/
     height: 100vh;
+    min-height: 100vh;
+    min-width: 100vw;
     background: linear-gradient(-45deg, #ffffff, var(--highlight-color));
     animation: gradient 1s ease infinite;
     width: 100%;
@@ -111,6 +163,7 @@ h1{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    z-index: -99;
 }
 
 .landing_page_section *{
@@ -120,11 +173,15 @@ h1{
     text-align: center;
     margin-left: 5vw;
     margin-right: 5vw;
-    font-size: 3vw;
+    font-size: 24px;
 }
 
 .landing_page_section a{
     cursor: pointer;
+}
+
+.landing_page_section img{
+    height: 100%;
 }
 
 .landing_page_links{
@@ -139,7 +196,7 @@ h1{
 
 .about_me_section{
     position: relative;
-    overflow: auto;
+    overflow: hidden;
     height: 85vh;
 }
 .about_me{
@@ -176,16 +233,27 @@ h1{
     padding: 1em;
 }
 
+@media (max-width: 70em){
+    .image{
+    display:none;
+    }
+    .about_me{
+        max-width: 100vw;
+    }
+}
+
 .image ul{
     left: auto;
     padding: 1em;
+    right: 0px;
 }
+
 
 .desc_myself{
     margin-left: 5vw;
     margin-right: 5vw;
     margin-top: 10vh;
-    font-size: 3.5vh;
+    font-size: 24px;
 }
 /*----------Resume----------*/
 .resume_section{
@@ -238,17 +306,13 @@ h1{
     color: var(--main-color);
     justify-content: center;
     text-align: center;
-    font-size: 0.9em;
+    font-size: 15px;
 }
 
 
 /*---------- Nav Bar ----------*/
 
 .navbar{
-    z-index: 2;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
 }
 
 .header {
@@ -256,22 +320,25 @@ h1{
     width: 100%;
     height: 5vh;
 }
+    
 
 nav{
+    float: right;
+    
     position: absolute;
     border: 1px;
     width: 100%;
+    height: auto;
     background: #000000; /* for old browsers (learned during senior project) */
     /*background: -webkit-linear-gradient(to right, #000000, #434343);*/
     background: linear-gradient(to right, var(--nav-color), #19191f, var(--highlight-color));
-    height: 10vh;
 }
 
 
 .nav-text{
     color: var(--nav-color);
     font-family: Cambria, Georgia, serif;
-    font-size: 1.2em;
+    font-size: 24px;
 }
 
 
@@ -280,6 +347,7 @@ nav ul{
     padding: 0;
     list-style: none;
     float: right;
+    text-align: right;
 }
 
 nav li{
@@ -292,7 +360,7 @@ nav a{
     font-weight: 900;
     text-decoration: none;
     text-transform: uppercase;
-    font-size: .8rem;
+    font-size: 15px;
     padding: .5em;
     color: #FFF;
 }
@@ -303,10 +371,38 @@ nav a:focus {
     cursor: pointer;
 }
 
+.dropMenu{
+    background: #000000; /* for old browsers (learned during senior project) */
+    /*background: -webkit-linear-gradient(to right, #000000, #434343);*/
+    background: linear-gradient(to right, var(--nav-color), #19191f, var(--highlight-color));
+    width: 100%;
+    margin: auto;
+    display: none;
+}
+
+.drop-link{
+    font-weight: 900;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 15px;
+    padding: .5em;
+    color: #FFF;
+}
+
 @media (min-width: 80rem) {
     nav{
         float: right;
     }
+}
+
+@media (max-width: 70em){
+    nav li{
+        display: none;
+    }
+}
+
+@media (min-width: 70em){
+    nav a.dropdown{display: none;}
 }
 
 /*----------Projects----------*/
@@ -315,6 +411,7 @@ nav a:focus {
     max-width: 100vw;
     position: relative;
     display: flex;
+    overflow: hidden;
     flex-direction: column;
 }
 
@@ -334,6 +431,8 @@ nav a:focus {
     background: rgba(110, 110, 110, 0);
     display: flex;
     flex-direction: column;
+    cursor: pointer;
+    
 }
 
 .cur_proj_container:hover{
@@ -345,7 +444,7 @@ nav a:focus {
     max-width: 90vw;
     position: relative;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 }
 
 .prev_proj_cont{
@@ -357,16 +456,17 @@ nav a:focus {
 
 .arrow{
     margin: auto;
-    font-size: 5vw;
+    font-size: 50px;
     cursor: pointer;
+    color:var(--main-color);
 }
 
 .prev_proj_container{
-    width:80%;
-    height: 25%;
+    width:25%;
+    height: 80%;
     background: rgba(110, 110, 110, 0);
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     margin-left:  auto;
     margin-right: auto;
     text-align: left;
@@ -390,17 +490,38 @@ nav a:focus {
 
 .proj_desc{
     color:var(--main-color);
-    font-size: 2vh;
+    font-size: 20px;
+}
+
+.proj_thumb{
+    height:auto;
+    max-width: 100%;
+    margin-top: 5%;
+}
+
+.proj_sec_desc{
+    color:var(--main-color);
+    font-size: 20px;
+    text-align: left;
+    margin-left: 5em;
+    width: 90%;
+}
+
+@media (max-width: 70em){
+    .proj_page_image img{
+    display:none;
+    }
 }
 
 
 /***********Projects HTML***********/
 .proj_page_image{
     height: 40vh;
-    top: 10vh;
+    top: 15vh;
     position: relative;
     display: flex;
     flex-direction: row;
+    width: 100%;
 }
 
 .proj_page_image img{
@@ -412,24 +533,26 @@ nav a:focus {
 
 .proj_page_image p{
     /*height: 100%;*/
-    max-width: 40%;
+    max-width: 70%;
     margin-right: auto;
     margin-left: auto;
 }
 
 .proj_bottom{
     display: flex;
+    margin-top: 5vh;
     flex-direction: row;
+    height: auto;
 }
 
 .proj_languages{
-    height: 40vh;
+    height: auto;
     width: 50vw;
     margin-top: 10vh;
 }
 
 .proj_links_list{
-    height: 40vh;
+    height: auto;
     width: 50vw;
     margin-top: 10vh;
 }
@@ -460,5 +583,12 @@ nav a:focus {
 
 .proj_desc_and_title{
     display: flex;
+    flex-direction: column;
+}
+
+.proj_details{
+    width: 100%;
+    display: flex;
+    margin-top: 5vh;
     flex-direction: column;
 }
