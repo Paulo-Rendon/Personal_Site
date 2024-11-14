@@ -13,29 +13,29 @@ document.addEventListener('DOMContentLoaded', function() {
 function buildPage(){
     document.getElementById("proj_page_image").innerHTML += `
             <img src=${projects[projIndex].thumbnail} alt=\"error\">
-            <div class=\"proj_desc_and_title\">
-                <h3 class=\"proj_section-name\">${projects[projIndex].projectName}</h3>
-                <p class=\"proj_desc\">${projects[projIndex].summary}</p>
+            <div class=\"proj-desc_and_title\">
+                <h3 class=\"pf-section-name\">${projects[projIndex].projectName}</h3>
+                <p class=\"proj-desc\">${projects[projIndex].summary}</p>
             </div>`;
     var tmp = projects[projIndex].languages[0];
     for(var i = 1; i < projects[projIndex].languages.length; i++){
         tmp += ", " + projects[projIndex].languages[i];
     }
     document.getElementById("proj_languages").innerHTML += `
-         <p class=\"proj_desc\">${tmp}</p>`;
+         <p class=\"proj-desc\">${tmp}</p>`;
     
     for(var name in projects[projIndex].links){
         console.log(name);
         document.getElementById("proj_links").innerHTML +=
-        `<div class="proj_links">
-<p class="proj_link_name">${name}:</p>
-<a href=${projects[projIndex].links[name]} target="_blank" class="proj_link_site">${projects[projIndex].links[name]}</a></div>`;
+        `<div class="proj-links">
+<p class="proj-link-name">${name}:</p>
+<a href=${projects[projIndex].links[name]} target="_blank" class="proj-link-site">${projects[projIndex].links[name]}</a></div>`;
     }
     for(var secName in projects[projIndex].more_detail){
         console.log(secName);
         document.getElementById("proj_details").innerHTML += `
         <h3 class=\"proj_sec_name\">${secName}</h3>
-        <p class=\"proj_sec_desc\">${projects[projIndex].more_detail[secName]}</p>`;
+        <p class=\"proj-sec-desc\">${projects[projIndex].more_detail[secName]}</p>`;
     }
 }
 

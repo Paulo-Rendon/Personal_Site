@@ -66,9 +66,9 @@ document.addEventListener('DOMContentLoaded', function() {
 function buildProjects(){
     for(var tmp = 0; tmp < MAX_PROJ_DISPLAY && projIndex + tmp < projects.length; tmp++){
             document.getElementById("prev_projects").innerHTML += `
-            <div class=\"prev_proj_container\" value= ${projIndex + tmp} onClick = \"openProject(${projIndex + tmp})\">
-                <img class=\"proj_thumb\" src=${projects[projIndex + tmp].thumbnail}>
-                <p class=\"proj_title\">${projects[projIndex + tmp].projectName}</p>
+            <div class=\"prev-proj-container\" value= ${projIndex + tmp} onClick = \"openProject(${projIndex + tmp})\">
+                <img class=\"proj-thumb\" src=${projects[projIndex + tmp].thumbnail}>
+                <p class=\"proj-title\">${projects[projIndex + tmp].projectName}</p>
             </div>`;
     }
     
