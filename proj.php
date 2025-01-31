@@ -22,41 +22,39 @@ if (!empty($_COOKIE['theme'])) {
     <body class="<?php echo $themeClass; ?>">
        <!-- <div class = "navbar">
             <section class="header"> -->
-        <div class="stick_handler">
+        <div class="stick-handler">
                 <nav>
-                    <div class="title">
-                        <a class="logo" href="index.php">
-                           <img src="images/logo.svg" height="70vh" width="70vw">
-                            <h2>Paulo Rendon</h2>
-                        </a>
-                    </div>
+                    <a class="logo" href="index.php">
+                       <img src="images/logo.svg" height="70vh" width="70vw">
+                        <h2>Paulo Rendon</h2>
+                    </a>
                     <ul>
                         <li><a href="index.php?start_section" class="nav-link">Home</a></li>
-                        <li><a href="index.php?resume_section" class="nav-link">Resume</a></li>
-                        <li><a href="index.php?projects_section" class="nav-link">Projects</a></li>
+                        <li><a href="index.php?resume-section" class="nav-link">Resume</a></li>
+                        <li><a href="index.php?projects-section" class="nav-link">Projects</a></li>
                         <li><a onClick="changeMode()" class="nav-link" id="modeBtn">Change Mode</a></li>
                         <a onClick="homeDrop()" class="dropdown" id="dropdownBtn">▼</a>
                     </ul>
                 </nav>
-            <div class="dropMenu" id="dropMenu">
-                <li><a href="index.php?start_section" class="drop-link">Home</a></li>
-                <li><a href="index.php?resume_section" class="drop-link">Resume</a></li>
-                <li><a href="index.php?projects_section" class="drop-link">Projects</a></li>
-                <li><a onClick="changeMode()" class="drop-link" id="modeBtn">Change Mode</a></li>
-            </div>
+                <div class="dropMenu" id="dropMenu">
+                    <li><a href="index.php?start_section" class="drop-link">Home</a></li>
+                    <li><a href="index.php?resume-section" class="drop-link">Resume</a></li>
+                    <li><a href="index.php?projects-section" class="drop-link">Projects</a></li>
+                    <li><a onClick="changeMode()" class="drop-link" id="modeBtn">Change Mode</a></li>
+                </div>
         </div>
             <!--</section>
         </div>-->
         
-        <div class="proj_page_image" id="proj_page_image">
+        <div class="proj-page-image" id="proj_page_image">
         </div>
-        <div class="proj_bottom">
-            <div class="proj_languages" id="proj_languages">
-                <h3 class="proj_section-name">Languages</h3>
+        <div class="proj-bottom">
+            <div class="proj-languages" id="proj_languages">
+                <h3 class="pf-section-name">Languages</h3>
             </div>
-            <div class="proj_links_list" id="proj_links">
-                <h3 class="proj_section-name">Important Links</h3>
+            <div class="proj-links-list" id="proj_links">
+                <h3 class="pf-section-name">Important Links</h3>
             </div>
         </div>
-        <div class = "proj_details" id="proj_details">
+        <div class = "proj-details" id="proj_details">
         </div>
