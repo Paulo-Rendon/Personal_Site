@@ -68,7 +68,7 @@ if (!empty($_COOKIE['theme'])) {
                 <ul><a href="https://www.instagram.com/irjimmyg" target="_blank">Photo Credit: Instagram - irjimmyg</a></ul>
             </div>
             <div class = "about-me">
-                <p class="desc-myself">I graduated from Sonoma State University with a 3.572 GPA in May 2021, earning me the Cum Laude honors. I studied Computer Science, and made the dean's list for six of my eight total semesters at Sonoma State University with 3 semesters being online due to COVID. I am a hard worker currently looking for a job that can help further my knowledge of Software development. I am best at C++ and Python, but also know HTML, CSS, SVG, SQL, and C.</p>
+                <p class="desc-myself">I graduated with Cum Laude honors from Sonoma State University, May 2021, maintaining a GPA of 3.572 and earning a Bachelor's degree in Computer Science. During my academic career, I achieved Dean's List recognition for six of eight semesters. As a dedicated and results-driven individual, I am actively seeking opportunities that will allow me to expand my expertise in software development. My primary strengths are in C++ and Python, though I am also proficient in HTML, CSS, SVG, SQL, and C</p>
             </div>
             <ul>
                 <a href="https://www.linkedin.com/in/paulo-rendon-jr-a54a20203/" target="_blank">LinkedIn: https://www.linkedin.com/in/paulo-rendon-jr-a54a20203/</a>
@@ -85,7 +85,7 @@ if (!empty($_COOKIE['theme'])) {
                 <object data="images/RendonResume_trans.pdf" type="application/pdf" width="80%" height="100%"></object>
             </div>
             <div class="btn-menu">
-                <div class = "button" id="res_btn" onclick='download("images/RendonResume2022.pdf", "RendonResume2022")'>
+                <div class = "button" id="res_btn" onclick='download("images/RendonResume.pdf", "RendonResume")'>
                     <p>Download Resume</p>
                 </div>
                 <div class = "button" id="trans_btn" onclick='download("images/SSU_TSRPT.pdf", "RendonTrans.pdf")'>
