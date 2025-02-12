@@ -4,9 +4,9 @@
 }
 
 body {
-    --main-color: #000;
-    --nav-color: #FFF;
-    --highlight-color: #b50000;
+    --main-color: #FFF;
+    --nav-color: #000;
+    --highlight-color: #003994;
     font-family: Cambria, Georgia, serif;
     margin: 0;
     background-color: var(--nav-color);
@@ -19,9 +19,9 @@ body {
 }
 
 body.dark-mode{
-    --main-color: #FFF;
-    --nav-color: #000;
-    --highlight-color: #003994;
+    --main-color: #000;
+    --nav-color: #FFF;
+    --highlight-color: #b50000;
 }
 
 
@@ -141,7 +141,7 @@ h1{
     position: relative;
     height: 100%;
     width: 100%;
-    margin-top: 10vh;
+    margin-top: 11vh;
     background: var(--nav-color);
 }
 
@@ -289,7 +289,8 @@ h1{
 }
 
 .button:hover{
-    background: var(--nav-color);
+    filter: brightness(70%);
+    /**background: var(--nav-color);**/
     cursor: pointer;
 }
 
@@ -428,8 +429,8 @@ nav a:focus {
 .cur-proj-container{
     width: 50%;
     height: 100%;
-    margin-left: 5%;
-    margin-right: 5%;
+    /**margin-left: 5%;
+    margin-right: 5%;**/
     background: rgba(110, 110, 110, 0);
     display: flex;
     flex-direction: column;
@@ -499,6 +500,14 @@ nav a:focus {
     height:auto;
     max-width: 100%;
     margin-top: 5%;
+}
+
+.proj_sec_name{
+    color: var(--main-color);
+    font-family: Cambria, Georgia, serif;
+    width: 100%;
+    text-transform: none;
+    font-size: 4vh;
 }
 
 .proj-sec-desc{

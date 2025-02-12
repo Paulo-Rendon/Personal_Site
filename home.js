@@ -17,7 +17,7 @@ function changeMode(){
 
 function weWillGo(section){
     var sec = document.getElementById(section);
-    var offset = window.innerHeight * .1;
+    var offset = window.innerHeight * .12;
     var y = sec.getBoundingClientRect().top + window.pageYOffset - offset;
     window.scrollTo({top: y, behavior: 'smooth'});
 }

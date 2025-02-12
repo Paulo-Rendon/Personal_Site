@@ -8,7 +8,8 @@
     <g id = "rendonE3dlogo" style="stroke-width: 1">
         <!-- Boarder -->
         <rect x="0" y="0" height="150" width="150"
-        style="fill:white; stroke:black"/>
+        style="fill:none; stroke:none"/>
+        <!-- style="fill:white; stroke:black"-->
 
         <!-- Hat -->
         <path d="M 35,40 a1,1 0 0,1 80,0 L 35,40"/>
