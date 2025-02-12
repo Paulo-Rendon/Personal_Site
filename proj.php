@@ -25,7 +25,7 @@ if (!empty($_COOKIE['theme'])) {
         <div class="stick-handler">
                 <nav>
                     <a class="logo" href="index.php">
-                       <img src="images/logo.svg" height="70vh" width="70vw">
+                        <img src="images/logo.svg" height="70vh" width="70vw">
                         <h2>Paulo Rendon</h2>
                     </a>
                     <ul>
